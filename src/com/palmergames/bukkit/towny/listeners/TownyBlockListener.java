@@ -12,7 +12,6 @@ import com.palmergames.bukkit.towny.object.TownBlock;
 import com.palmergames.bukkit.towny.object.TownyWorld;
 import com.palmergames.bukkit.towny.regen.TownyRegenAPI;
 import com.palmergames.bukkit.towny.war.common.WarZoneConfig;
-import com.palmergames.bukkit.towny.war.eventwar.War;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -225,7 +224,7 @@ public class TownyBlockListener implements Listener {
 			 */
 			boolean inWarringTown = false;
 			if (TownyAPI.getInstance().isWarTime()) {
-				if (War.isWarringTown(TownyAPI.getInstance().getTown(loc)))
+				if (TownyUniverse.getInstance().hasWarEvent(townBlock))
 					inWarringTown = true;
 			}
 			/*
