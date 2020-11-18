@@ -230,7 +230,7 @@ public class TownyBlockListener implements Listener {
 			/*
 			 * Event War & Flag War's fire control settings.
 			 */
-			if (townyWorld.isWarZone(coord) || inWarringTown) {
+			if (townyWorld.isFlagWarZone(coord) || inWarringTown) {
 				if (WarZoneConfig.isAllowingFireInWarZone()) {                         // Allow ignition using normal fire-during-war rule.
 					return false;
 				} else if (inWarringTown && TownySettings.isAllowWarBlockGriefing()) { // Allow ignition using exceptionally-griefy-war rule for Event War.
